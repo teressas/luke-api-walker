@@ -6,6 +6,7 @@ const SearchForm = (props) => {
 
     const [items, setItems] = useState([]);
     const [id, setId] = useState("1");
+    // does this set the select item to 1st value?
     const [selectedItem, setSelectedItem] = useState(items[0]);
 
     const history = useHistory();
@@ -25,6 +26,7 @@ const SearchForm = (props) => {
         e.preventDefault()
         console.log(selectedItem);
         console.log(id)
+        // takes you to the route after form submission        
         history.push(`/${selectedItem}/${id}`)
     }
     
